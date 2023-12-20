@@ -3,7 +3,9 @@ package com.example.pushnotificationsfirebase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.example.pushnotificationsfirebase.databinding.ActivityMainBinding
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -19,16 +21,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //subscribe to topic
+        FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)
+
         binding.btnSend.setOnClickListener {
             val title = binding.edTitle.text.toString()
             val message = binding.edMessage.text.toString()
 
             if (title.isNotEmpty() && message.isNotEmpty()){
+                Toast.makeText(this,"Has values",Toast.LENGTH_SHORT).show()
               PushNotification(
                   NotificationData(title,message),
                   TOPIC
              ).also {
                  sendNotifications(it)
+                  Toast.makeText(this,"I get inside",Toast.LENGTH_SHORT).show()
               }
             }
         }
@@ -37,13 +44,13 @@ class MainActivity : AppCompatActivity() {
         try {
             val response = RetrofitInstance.api.postNotification(notification)
             if(response.isSuccessful){
-                Log.d(TAG,"Response ${Gson().toJson(response)}")
+                Log.d(TAG,"Response:  ${Gson().toJson(response)}")
             }else{
                 Log.d(TAG,response.errorBody().toString())
             }
 
         }catch (e:Exception){
-            Log.e(TAG,e.toString())
+            Log.e("hello",e.toString())
         }
     }
 }
