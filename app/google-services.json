@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "460344786027",
+    "project_id": "talk2me-62d4e",
+    "storage_bucket": "talk2me-62d4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460344786027:android:5a68d38eda14965ed0c52e",
+        "android_client_info": {
+          "package_name": "com.example.pushnotificationsfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460344786027-kk14apkmn3fqb24jb1qfob64b0525eka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-AMOCuCe7vUi96FDDTKFjbj_9IpBcbhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460344786027-kk14apkmn3fqb24jb1qfob64b0525eka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460344786027:android:55b29adafb931383d0c52e",
+        "android_client_info": {
+          "package_name": "com.example.talk2me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460344786027-kk14apkmn3fqb24jb1qfob64b0525eka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-AMOCuCe7vUi96FDDTKFjbj_9IpBcbhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460344786027-kk14apkmn3fqb24jb1qfob64b0525eka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

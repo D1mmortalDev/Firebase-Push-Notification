@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PushNotificationsFirebase</string>
+    <string name="ed_title">Title</string>
+    <string name="ed_message">Message</string>
+    <string name="ed_token">Token</string>
+    <string name="btn_send">Send</string>
+</resources>
